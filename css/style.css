@@ -1,0 +1,137 @@
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    border-bottom: 1px #CCC solid;
+}
+
+footer {
+    background-color: #2C2C2C;
+    color: #b6b6b6;
+    display: flex;
+}
+
+.action-button {
+    background: linear-gradient(180deg, rgba(254,254,209,1) 0%, rgba(239,197,44,1) 100%);
+    height: 100%;
+    color: #906219;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: #EFCD56 1px solid;
+}
+
+.action-button-gray {
+    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(236, 236, 236) 100%);
+    height: 100%;
+    color: #888;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: #CCC 1px solid;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 8px;
+}
+
+.post {
+    display: flex;
+    gap: 8px;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-content { 
+    flex-grow: 1;
+    background-color: #F2F2F2;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.post-content > span { 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.avatar-small {
+    box-sizing: border-box;
+    border: 1px #CCC solid;
+    padding: 2px;
+    background-clip: content-box;
+}
+
+.post-button {
+    color: #000;
+}
+
+.post-name {
+    color: #000;
+}
+
+/* DARK THEME */
+
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark main {
+    background-color: #222;
+}
+
+body.dark header {
+    border-bottom-color: #CCC;
+}
+
+body.dark footer {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .action-button-gray {
+    background: linear-gradient(180deg, #444 0%, #333 100%);
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark .post-header {
+    color: #fff;
+}
+
+body.dark .post-content {
+    background-color: #333;
+}
+
+body.dark .post-button {
+    color: #fff;
+}
+
+body.dark .post-name {
+    color: #fff;
+}
+
+body.dark a {
+    color: #fff; 
+}

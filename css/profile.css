@@ -1,0 +1,183 @@
+.prof-view {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.prof-main {
+    flex-grow: 1;
+}
+
+.bar {
+    border-left: 1px #CCC dotted;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 149px;
+    min-width: 149px;
+}
+
+.avatar {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px #CCC solid;
+    padding: 2px;
+    background-clip: content-box;
+}
+
+.edit-mode {
+    display: none;
+}
+#edit-toggle:checked ~ .edit-mode {
+    display: block;
+}
+#edit-toggle:not(:checked) ~ .view-mode {
+    display: inline;
+}
+#edit-toggle:checked ~ .view-mode {
+    display: none;
+}
+.edit-form {
+    margin-top: 10px;
+}
+.edit-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.edit-form input[type="text"], .edit-form input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+.edit-form button {
+    display: block;
+    margin-top: 10px;
+}
+
+.tab {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 16px;
+    color: #000;
+    transition: all 1s;
+}
+
+.tab.active {
+    font-weight: bold;
+    border-bottom-color: #407cac;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.info {
+    word-wrap: break-word;
+}
+
+.tab-contents > div {
+    border-top: none;
+    padding-top: 8px;
+}
+
+.post-box {
+    padding-bottom: 8px;
+    padding-right: 8px;
+}
+
+.post-box > form {
+    display: flex;
+    gap: 8px;
+}
+
+.post-box > form > textarea {
+    flex-grow: 1;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22px, 22px));
+    gap: 3px;
+}
+
+.profile-grid img {
+    width: 22px;
+    height: 22px;
+    object-fit: cover;
+}
+
+.profile-grid-label {
+    font-size: 13px;
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 1px #CCC solid;
+}
+
+/* DARK THEME */
+
+body.dark .prof-view {
+    background-color: #222;
+}
+
+body.dark .edit-form input[type="text"], 
+body.dark .edit-form input[type="file"] {
+    background-color: #222F44;
+    color: #ddd;
+}
+
+body.dark .tab {
+    color: #ddd;
+    border-bottom-color: transparent;
+}
+
+body.dark .tab.active {
+    border-bottom-color: #ccc;
+}
+
+body.dark .tab-content {
+    background-color: #222;
+}
+
+body.dark .info {
+    background-color: #222;
+}
+
+body.dark .post-box {
+    background-color: #222;
+}
+
+.bio {
+    width: 100%;
+    max-height: 245px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.bio img {
+    display: block;
+}
+
+.bio .br {
+    flex-basis: 100%; /* Force a new line */
+    height: 0; /* No height */
+    margin: 0; /* Remove any margin */
+}
+
+.bio {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.bio::-webkit-scrollbar { 
+    display: none;
+}

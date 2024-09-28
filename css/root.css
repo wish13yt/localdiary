@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Cyrillic';
+    src: local('sans-serif'), local('Arial'), local('Helvetica');
+    unicode-range: U+0400-04FF; /* Cyrillic block */
+}
+
+body {
+  margin: 0;
+}
+
+* {
+    font-family: 'Cyrillic', "ＭＳ Pゴシック", "MS PGothic", sans-serif;
+}
